@@ -3,21 +3,25 @@ import animales
 menu = {
     '1':'Loro',
     '2':'Perro',
+    '3':'Oso',
     '0':'Exit'
 }
 
 class Animal:
     loro=0
     perro=0
+    oso=0
     
     animales_lista = {
         1:animales.loro,
-        2:animales.perro
+        2:animales.perro,
+        3:animales.oso
     }
     
-    def __init__(self,loro,perro):
+    def __init__(self,loro,perro,oso):
         self.loro = loro
         self.perro = perro
+        self.oso = oso
 
     def mostrar_animal(self,op):
         print(self.animales_lista[op])
@@ -41,6 +45,8 @@ if __name__ == '__main__':
             print(animales.loro)
         elif op == 2:
             print(animales.perro)
+        elif op == 3:
+            print(animales.oso)
         else:
             #Opcion invalida
             print('Opción inválida, intentelo nuevamente')
